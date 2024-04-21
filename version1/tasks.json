@@ -1,0 +1,7 @@
+[
+    { "id": 1, "title": "Read article about JavaScript", "completed": false },
+    { "id": 2, "title": "Complete the frontend project", "completed": false },
+    { "id": 3, "title": "Fix bugs in the code", "completed": false },
+    { "id": 4, "title": "Write unit tests for new features", "completed": false },
+    { "id": 5, "title": "Review peer's pull requests", "completed": false }
+]
