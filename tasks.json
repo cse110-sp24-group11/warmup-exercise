@@ -1,0 +1,9 @@
+{
+    "taskNum": 1,
+    "priority": 0.5,
+    "title": "task title",
+    "start": ["1", "1", "1971"],
+    "due": ["12", "31", "2024"],
+    "body": "text for task \n reading, traveling, photography",
+    "finished": false
+}
