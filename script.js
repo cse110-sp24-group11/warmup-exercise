@@ -25,12 +25,18 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function toggleTaskCompletion(taskId) {
+    
     const checkbox = document.getElementById(`task-${taskId}`);
     const label = checkbox.nextElementSibling;
+    var listItem = checkbox.parentElement;
+    var list = listItem.parentElement;
+
     if (checkbox.checked) {
         label.classList.add('completed');
+        list.appendChild(listItem);
     } else {
         label.classList.remove('completed');
+        list.insertBefore(listItem, list.childNodes[taskId]);
     }
 }
 function toggleSize(box) {
