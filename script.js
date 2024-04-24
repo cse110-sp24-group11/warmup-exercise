@@ -7,15 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 return `
                     <li>
                         <input type="checkbox" id="task-${task.id}" ${task.completed ? 'checked' : ''} onchange="toggleTaskCompletion(${task.id})">
+                        <label for="task-${task.id}" class="${task.completed ? 'completed' : ''}">${task.title}</label>
                         <div class="box" onclick="toggleSize(this)">
-                        <label for="task-${task.id}" class="${task.completed ? 'completed' : ''}">
-                        <h2>${task.title}</h2></label>
-                        <div class="content">
-                        <p>Time started: ${task.start}</p>
-                        <p>Deadline: ${task.due}</p>
-                        <p>Description: ${task.body}</p>
-                        <p>Task Priority: ${task.priority}</p>
-                        </div>
+                          <label for="task-${task.id}" class="${task.completed ? 'completed' : ''}">
+                          <h2>${task.title}</h2></label>
+                          <div class="content">
+                            <p>Time started: ${task.start}</p>
+                            <p>Deadline: ${task.due}</p>
+                            <p>Description: ${task.body}</p>
+                            <p>Task Priority: ${task.priority}</p>
+                          </div>
                         </div>
                     </li>`;
             }).join('');
