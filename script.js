@@ -1,20 +1,25 @@
-import data from './tasks.json' assert { type: 'json' };
-console.log(data);
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('tasks.json')
+        .then(response => response.json())
+        .then(tasks => {
+            const listElement = document.getElementById('taskList');
+            listElement.innerHTML = tasks.map(task => {
+                return `
+                    <li>
+                        <input type="checkbox" id="task-${task.id}" ${task.completed ? 'checked' : ''} onchange="toggleTaskCompletion(${task.id})">
+                        <label for="task-${task.id}" class="${task.completed ? 'completed' : ''}">${task.title}</label>
+                    </li>`;
+            }).join('');
+        })
+        .catch(error => console.error('Error loading the tasks:', error));
+});
 
-var tasks;
-/*
-fetch('./tasks.json')
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(data) {
-        tasks = data;
-    })
-    .catch(function(error) {
-        console.log('Error:', error);
-    });
-*/
-//fetch('tasks.json')
-  //  .then((response) => response.json())
-    //.then((json) => console.log(json));
-// work with tasks to target/populate/create HTML 
+function toggleTaskCompletion(taskId) {
+    const checkbox = document.getElementById(`task-${taskId}`);
+    const label = checkbox.nextElementSibling;
+    if (checkbox.checked) {
+        label.classList.add('completed');
+    } else {
+        label.classList.remove('completed');
+    }
+}
