@@ -43,7 +43,7 @@ li:hover {
 
 .box {
     width: 200px;
-    height: 100px;
+    height: auto;
     border: 2px solid #ccc;
     padding: 10px;
     margin: 20px;
@@ -53,6 +53,7 @@ li:hover {
 }
 .box:hover {
     border-color: #555;
+    color: black;
 }
 .box.expanded {
     width: 400px;
