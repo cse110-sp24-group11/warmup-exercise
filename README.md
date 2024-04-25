@@ -9,6 +9,7 @@ View our site [here!](https://cse110-sp24-group11.github.io/warmup-exercise/)
 - Aryan created initial functionality to load JSON data into HTML.
 - Shilpa fixed styling and reviewed pull requests to merge.
 - Ethan implemented task expansion features and moving tasks to the bottom once completed.
+- Ryan added additional styling and color based on json priority data.
 
 ### Notes
 - Difficult to implement adding and deleting buttons because you have to write directly to the JSON files
