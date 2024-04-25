@@ -5,39 +5,43 @@ document.addEventListener('DOMContentLoaded', function () {
             const listElement = document.getElementById('taskList');
             listElement.innerHTML = tasks.map(task => {
                 return `
+                <div class="box ${task.priority} ${task.completed ? 'completed' : ''}" onclick="toggleSize(this)">
                     <li>
                         <input type="checkbox" id="task-${task.id}" ${task.completed ? 'checked' : ''} onchange="toggleTaskCompletion(${task.id})">
-                        <label for="task-${task.id}" class="${task.completed ? 'completed' : ''}">${task.title}</label>
-                        <div class="box" onclick="toggleSize(this)">
-                          <h2>${task.title}</h2>
-                          <div class="content">
-                            <p>Time started: ${task.start}</p>
-                            <p>Deadline: ${task.due}</p>
-                            <p>Description: ${task.body}</p>
-                            <p>Task Priority: ${task.priority}</p>
-                          </div>
+                        <label for="task-${task.id}"><h2>${task.title}</h2></label>
+                          <div class="task-info">
+                            <h3>Task Priority: ${task.priority.toUpperCase()} | Deadline: ${task.due}</h3>
+                            <p><b>Description:</b> ${task.description}</p>
                         </div>
-                    </li>`;
+                    </li>
+                </div>`;
             }).join('');
         })
         .catch(error => console.error('Error loading the tasks:', error));
 });
 
+/**
+ * Marks a task as complete, changes it color, and moves it to the bottom of page.
+ * @param {*} taskId id number assigned to task via json file
+ */
 function toggleTaskCompletion(taskId) {
-    
     const checkbox = document.getElementById(`task-${taskId}`);
-    const label = checkbox.nextElementSibling;
-    var listItem = checkbox.parentElement;
-    var list = listItem.parentElement;
+    let listItem = checkbox.closest('.box');
+    let list = listItem.parentElement;
 
     if (checkbox.checked) {
-        label.classList.add('completed');
+        listItem.classList.add('completed');
         list.appendChild(listItem);
     } else {
-        label.classList.remove('completed');
+        listItem.classList.remove('completed');
         list.insertBefore(listItem, list.childNodes[taskId]);
     }
 }
+
+/**
+ * Expands/collapses a task description upon click.
+ * @param {*} box Box being expanded/collapsed
+ */
 function toggleSize(box) {
     box.classList.toggle('expanded');
 }
