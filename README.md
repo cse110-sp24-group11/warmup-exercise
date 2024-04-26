@@ -3,6 +3,8 @@ We decided to implement the task list of journal entries.
 
 View our site [here!](https://cse110-sp24-group11.github.io/warmup-exercise/)
 
+Watch the video of our implementation [here!](https://www.youtube.com/watch?v=7P8exhnZxo4&ab_channel=ShilpaChowbey)
+
 ## Implementation Team
 - Entire team created initial file structure & data flow.
 - Jacob researched on add/delete buttons.
