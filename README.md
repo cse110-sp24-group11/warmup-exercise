@@ -20,4 +20,4 @@ Watch the video of our implementation [here!](https://www.youtube.com/watch?v=7P
 - Not viewport responsive (won't look great on mobile device)
 
 ## Analysis Team
-
+- Xinjun, Aryan, Cielo, and Nirvek worked on the SWOT analysis
