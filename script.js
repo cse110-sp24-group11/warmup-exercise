@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('tasks.json')
         .then(response => response.json())
         .then(tasks => {
+            /**
+             * Represents the list element with the id 'taskList'.
+             * populates the task list with the tasks from the json file.
+             * @type {HTMLElement}
+             */
             const listElement = document.getElementById('taskList');
             listElement.innerHTML = tasks.map(task => {
                 return `

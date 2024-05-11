@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "jest": "^29.7.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.3"
+  },
+  "scripts": {
+    "test": "jest",
+    "docs": "jsdoc script.js"
+  },
+  "jest": {
+    "preset": "jest-puppeteer",
+    "verbose": true
+  }
+}
