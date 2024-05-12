@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "priority": "high",
+        "title": "Template Task",
+        "due": "12/31/2024",
+        "description": "text for task \n reading, traveling, photography",
+        "completed": false
+    },
+    {
+        "id": 2, 
+        "priority": "medium",
+        "due": "6/14/2024",
+        "title": "Complete the frontend project", 
+        "description": "Yeah finish this",
+        "completed": false 
+    },
+    {
+        "id": 3, 
+        "priority": "high",
+        "due": "ASAP",
+        "title": "Fix bugs in the code", 
+        "description": "We need the code to actually work.",
+        "completed": false 
+    },
+    {
+        "id": 4, 
+        "priority": "low",
+        "due": "12/31/2024",
+        "title": "Write unit tests for new features", 
+        "description": "Testing is needed so that we can confirm the code fits all scenarios",
+        "completed": false 
+    },
+    { 
+        "id": 5, 
+        "priority": "low",
+        "due": "4/26/2024",
+        "title": "Review peer's pull requests", 
+        "description": "We want to add new features as we go iteratively!",
+        "completed": false 
+    }
+]

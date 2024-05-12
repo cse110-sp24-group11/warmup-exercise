@@ -15,6 +15,6 @@ jobs: # the things being executed
       - name: JS Docs Action
         uses: andstor/jsdoc-action@v1
         with:
-          source_dir: ./
+          source_dir: ./src
           recurse: true
           output_dir: ./out
