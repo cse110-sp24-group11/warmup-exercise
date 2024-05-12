@@ -5,13 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const listElement = document.getElementById('taskList');
             listElement.innerHTML = tasks.map(task => {
                 return `
-                <div class="box ${task.priority} ${task.completed ? 'completed' : ''}" onclick="toggleSize(this)">
+                <div class="box ${task.priority} ${task.completed ? 'completed' : ''}" tags ="${task.tags}" onclick="toggleSize(this)">
                     <li>
                         <input type="checkbox" id="task-${task.id}" ${task.completed ? 'checked' : ''} onchange="toggleTaskCompletion(${task.id})">
                         <label for="task-${task.id}"><h2>${task.title}</h2></label>
                           <div class="task-info">
                             <h3>Task Priority: ${task.priority.toUpperCase()} | Deadline: ${task.due}</h3>
                             <p><b>Description:</b> ${task.description}</p>
+                            <p><b>Tags:</b> ${task.tags}</p>
                         </div>
                     </li>
                 </div>`;
@@ -45,3 +46,16 @@ function toggleTaskCompletion(taskId) {
 function toggleSize(box) {
     box.classList.toggle('expanded');
 }
+
+const filterText = document.getElementById("filter-bar");
+const filterButton = document.getElementById("filter-button");
+
+filterButton.addEventListener("click", function(){
+    let filterTasks = document.querySelectorAll("[class^=box ]");
+    for(let i = 0; i < filterTasks.length; i++) {
+        if(!filterText.value)
+            filterTasks[i].classList.remove("filtered");
+        else if(!filterTasks[i].getAttribute("tags").includes(filterText.value))
+            filterTasks[i].classList.add("filtered");
+    }
+});

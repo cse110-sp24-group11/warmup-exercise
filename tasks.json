@@ -5,7 +5,8 @@
         "title": "Template Task",
         "due": "12/31/2024",
         "description": "text for task \n reading, traveling, photography",
-        "completed": false
+        "completed": false,
+        "tags": ["tag1", "tag2"]
     },
     {
         "id": 2, 
@@ -13,7 +14,8 @@
         "due": "6/14/2024",
         "title": "Complete the frontend project", 
         "description": "Yeah finish this",
-        "completed": false 
+        "completed": false,
+        "tags": ["tag1", "tag3"] 
     },
     {
         "id": 3, 
@@ -21,7 +23,8 @@
         "due": "ASAP",
         "title": "Fix bugs in the code", 
         "description": "We need the code to actually work.",
-        "completed": false 
+        "completed": false,
+        "tags": ["tag3", "tag4", "tag5"]
     },
     {
         "id": 4, 
@@ -29,7 +32,8 @@
         "due": "12/31/2024",
         "title": "Write unit tests for new features", 
         "description": "Testing is needed so that we can confirm the code fits all scenarios",
-        "completed": false 
+        "completed": false,
+        "tags": ["tag1", "tag2", "tag5"] 
     },
     { 
         "id": 5, 
@@ -37,6 +41,7 @@
         "due": "4/26/2024",
         "title": "Review peer's pull requests", 
         "description": "We want to add new features as we go iteratively!",
-        "completed": false 
+        "completed": false,
+        "tags": ["tag4"] 
     }
 ]
