@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('tasks.json')
+    fetch('src/tasks.json')
         .then(response => response.json())
         .then(tasks => {
             /**
