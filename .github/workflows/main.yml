@@ -17,4 +17,5 @@ jobs: # the things being executed
         with:
           source_dir: ./src
           recurse: true
-          output_dir: ./out
+          output_dir: ./docs
+          
