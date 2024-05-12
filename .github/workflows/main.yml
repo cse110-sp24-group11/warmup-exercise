@@ -11,7 +11,7 @@ jobs: # the things being executed
         run: npm install
       - run: npm install jest
       - run: npm install puppeteer
-      - run: npm install jsdoc --save-dev
+      - run: npm install jsdoc
       - name: JS Docs Action
         uses: andstor/jsdoc-action@v1
         with:
